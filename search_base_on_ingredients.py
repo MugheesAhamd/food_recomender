@@ -55,5 +55,8 @@ words_in_dict = dict(zip(words_count_array , feature_names))
 words_in_dict = sorted(words_in_dict.items() , key=operator.itemgetter(0))
 
 
+#################saving as csv file ####################################
 
+savingdf = recipes[['ingredients','title','recipe_id','category']]
 
+savingdf.to_csv('cleaned_for_db.csv')
